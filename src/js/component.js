@@ -238,4 +238,10 @@ $(document).ready(function () {
   
     var observer = lozad();
   observer.observe();
+  
+  $('nav').hover(function(){
+    $('img[data-src]').each(function(){
+      $(this).attr('src', $(this).data('src'));
+    })
+  })
 });
