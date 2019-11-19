@@ -321,4 +321,50 @@
       display: none;
     }
   }
+  .xs-none {
+    display: none;
+  }
+  .lg-none {
+    display: block;
+  }
+  .thx-info {
+    text-align: right;
+    max-width: 100%;
+  }
+  .thx .header-top .left {
+    br {
+      display: none;
+    }
+  }
+  .header-video {
+    margin-bottom: 30px;
+     iframe {
+    width: 100%;
+    min-height: 185px;
+    height: calc(100vw / 1.8);
+    max-height: 650px;
+  }
+  }
+  .header-speacker .h-text {
+    font-size: 16px;
+  }
+  .header-speacker .arr {
+    margin-right: 9px;
+    img {
+      transform: rotate(-95deg)
+    }
+}
+  .thx .header-item h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    br {
+      display: none;
+    }
+} 
+  .header-speacker .name {
+    text-align: left;
+  }
+  .modal-large {
+    padding-top: 50px;
+  }
 }

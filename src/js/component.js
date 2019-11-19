@@ -10,27 +10,30 @@ $(document).ready(function () {
     })
   });
 
-if($(window) > 1200) {
+  if ($(window).width() > 1200) {
     $(".fact-img img").mgGlitch({
-    destroy: false,
-    glitch: true,
-    scale: true,
-    blend: true,
-    blendModeType: 'hue',
-    glitch1TimeMin: 200,
-    glitch1TimeMax: 400,
-    glitch2TimeMin: 10,
-    glitch2TimeMax: 100,
-  });
+      destroy: false,
+      glitch: true,
+      scale: true,
+      blend: true,
+      blendModeType: 'hue',
+      glitch1TimeMin: 200,
+      glitch1TimeMax: 400,
+      glitch2TimeMin: 10,
+      glitch2TimeMax: 100,
+    });
 
-}
-  
-  $('.mob-btn').click(function(){
+  }
+
+  $('.mob-btn').click(function () {
     $('.menu').slideToggle(300);
   })
-  new Vivus('svganimate', {
-    duration: 200
-  });
+  if ($('div').hasClass('fact-item_bottom')) {
+    new Vivus('svganimate', {
+      duration: 200
+    });
+
+  }
   $('.quote-img').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
     classToRemove: 'hidden_animation',
@@ -70,8 +73,8 @@ if($(window) > 1200) {
 
     $from.parents('.video').append('<iframe width="' + imgWidth + '" height="' + imgHeight + '" src="https://www.youtube.com/embed/' + $from.parents(".video").data("id") + '?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
   })
-  
-  
+
+
   $('.scroll').click(function (e) {
     event.preventDefault();
     var id = $(this).attr('href'),
@@ -84,22 +87,21 @@ if($(window) > 1200) {
   });
 
 
-	$('.popup-youtube').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
+  $('.popup-youtube').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
 
-		fixedContentPos: false
-	});
+    fixedContentPos: false
+  });
 
 
   $('[data-popup]').magnificPopup({
     type: 'inline',
     preloader: false
   });
-
   var heightPage = $(document).height() / 2;
 
   $(window).scroll(function () {
@@ -112,7 +114,6 @@ if($(window) > 1200) {
   function showModal(id) {
     console.log('show modal 50%');
   }
-
 
   // функция возвращает cookie с именем name, если есть, если нет, то undefined    
   function getCookie(name) {
@@ -139,7 +140,7 @@ if($(window) > 1200) {
           }
       }); */
   }
-  
+
 
 
   $("input[name='phone']").mask("+38 (999) 999-9999");
@@ -234,4 +235,7 @@ if($(window) > 1200) {
     }
   });
 
+  
+    var observer = lozad();
+  observer.observe();
 });
