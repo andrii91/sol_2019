@@ -888,5 +888,10 @@ screen and (max-height: 300px) {
   }
 }
 
+
 @import 'info/bootstrap';
 @import 'info/main';
+
+b, strong {
+    font-weight: 900;
+}

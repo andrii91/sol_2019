@@ -74,7 +74,14 @@ line-height: 1.33;
 }
 
 .header {
-  padding: 150px 0 10px;
+  padding: 100px 0 10px;
+  min-height: 100vh;
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   
 }
 
@@ -97,6 +104,8 @@ font-weight: 400;
     padding: 10px 17px;
     position: relative;
     margin-top: 12px;
+    text-transform: uppercase;
+    line-height: 1.2;
     &:before {
     content: "";
     border: 10px solid transparent;
@@ -301,7 +310,7 @@ text-transform: uppercase;
 }
 
 .game {
-  padding: 60px 0;
+  padding: 60px 0 120px;
   text-align: center;
 }
 
@@ -404,7 +413,7 @@ height: 589px;
 
 .fact-item_bottom {
   text-align: center;
-  padding: 77px 161px 77px 86px;
+  padding: 77px 155px 77px 86px;
   position: relative;
   margin-top: 100px;
   max-width: 1015px;

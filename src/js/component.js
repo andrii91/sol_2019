@@ -4,7 +4,7 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    var scrollT = ($(window).scrollTop() - $('.error').offset().top - 200) / 10;
+    var scrollT = ($(window).scrollTop() - $('.error').offset().top - 400) / 8;
     $('.error-img img').css({
       'transform': 'rotate(' + scrollT + 'deg)'
     })
@@ -14,8 +14,8 @@ $(document).ready(function () {
     $(".fact-img img").mgGlitch({
       destroy: false,
       glitch: true,
-      scale: true,
-      blend: true,
+      scale: false,
+      blend: false,
       blendModeType: 'hue',
       glitch1TimeMin: 200,
       glitch1TimeMax: 400,
@@ -37,7 +37,7 @@ $(document).ready(function () {
   $('.quote-img').addClass("hidden_animation").viewportChecker({
     classToAdd: 'visible animated fadeInLeft', // Class to add to the elements when they are visible
     classToRemove: 'hidden_animation',
-    offset: 0
+    offset: '50%'
   });
 
   var reviews = $('.reviews-carousel');

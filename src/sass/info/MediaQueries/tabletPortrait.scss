@@ -3,6 +3,29 @@
 @media #{$tabletPortrait} {
     @import '../mobile';
   	& {
-     
+      .reviews-item img {
+        max-height: 250px;
+      }
+       .reviews-carousel .owl-nav button {
+    top: 74%;
+}
+      .xs-br {
+        display: none;
+      }
+      .registration {
+        .h2-title {
+          br {
+            display: block;
+          }
+        }
+      }
+      .header-speacker {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
 	}
 }
